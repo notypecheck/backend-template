@@ -6,6 +6,7 @@ from strawberry.tools import merge_types
 from app.core.di import create_container
 
 from .apps.books import BookMutation, BookQuery
+from .context import context_setter
 
 query = merge_types(
     name="Query",
@@ -23,6 +24,6 @@ schema = Schema(
     extensions=[
         ParserCache(maxsize=128),
         ValidationCache(maxsize=128),
-        AioInjectExtension(container=create_container()),
+        AioInjectExtension(container=create_container(), context_setter=context_setter),
     ],
 )

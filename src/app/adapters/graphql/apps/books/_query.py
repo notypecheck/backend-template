@@ -2,8 +2,8 @@ from typing import Annotated
 
 import strawberry
 from aioinject import Inject
-from aioinject.ext.strawberry import inject
 
+from app.adapters.graphql.context import inject
 from app.core.domain.books.queries import BookGetQuery
 
 from .types import BookGQL

@@ -2,9 +2,9 @@ from typing import Annotated
 
 import strawberry
 from aioinject import Inject
-from aioinject.ext.strawberry import inject
 from result import Err
 
+from app.adapters.graphql.context import inject
 from app.adapters.graphql.errors import EntityAlreadyExistsErrorGQL
 from app.core.domain.books.commands import BookCreateCommand
 from app.core.domain.books.errors import BookAlreadyExistsError
