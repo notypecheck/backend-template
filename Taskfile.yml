@@ -11,14 +11,6 @@ tasks:
     cmd:
       task: all
 
-  .pdm:
-    internal: true
-    desc: Ensure that PDM is installed
-    silent: true
-    preconditions: []
-#      - sh: pdm -V
-#        msg: "Please install PDM: https://pdm.fming.dev/latest/#installation"
-
   helm-lint:
     desc: "Lint helm chart"
     dir: ".k8s/app"
@@ -29,7 +21,6 @@ tasks:
 
   lint:
     desc: Lint python source files
-    deps: [.pdm]
     cmds:
       - "{{.RUNNER}} ruff check {{.SOURCES}}"
       - "{{.RUNNER}} ruff format --check --diff {{.SOURCES}}"
@@ -37,26 +28,22 @@ tasks:
   format:
     desc: Format python source files
     aliases: ["fmt"]
-    deps: [.pdm]
     cmds:
       - "{{.RUNNER}} ruff format {{ .SOURCES }}"
       - "{{.RUNNER}} ruff check --fix {{.SOURCES}}"
 
   deptry:
     desc: Check used dependencies with deptry
-    deps: [.pdm]
     silent: true
     cmd: "{{.RUNNER}} deptry {{.SOURCES_ROOT}}"
 
   typecheck:
     desc: Perform type-checking
-    deps: [.pdm]
     silent: true
     cmd: "{{.RUNNER}} mypy {{.SOURCES}}"
 
   test:
     desc: Run tests
-    deps: [.pdm]
     cmd: "{{.RUNNER}} pytest --reuse-db -n auto --cov"
 
   testcov:
