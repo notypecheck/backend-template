@@ -8,19 +8,19 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
-    "aioinject>=1.1.0",
-    "alembic>=1.16.1",
+    "aioinject>=1.4.3",
+    "alembic>=1.16.3",
     "asyncpg>=0.30.0",
-    "fastapi>=0.115.12",
+    "fastapi>=0.116.0",
     "orjson>=3.10.18",
-    "pydantic>=2.11.5",
-    "pydantic-settings>=2.9.1",
-    "python-dotenv>=1.1.0",
+    "pydantic>=2.11.7",
+    "pydantic-settings>=2.10.1",
+    "python-dotenv>=1.1.1",
     "result>=0.17.0",
-    "sentry-sdk>=2.29.1",
+    "sentry-sdk>=2.32.0",
     "sqlalchemy[asyncio]>=2.0.41",
-    "strawberry-graphql>=0.270.4",
-    "uvicorn>=0.34.2",
+    "strawberry-graphql>=0.275.5",
+    "uvicorn>=0.35.0",
     "uvloop>=0.21.0 ; sys_platform != 'win32'",
 ]
 
@@ -28,19 +28,19 @@ dependencies = [
 [dependency-groups]
 lint = [
     "deptry>=0.23.0",
-    "mypy>=1.15.0",
-    "ruff>=0.11.11",
+    "mypy>=1.16.1",
+    "ruff>=0.12.2",
 ]
 test = [
     "anyio>=4.6.2.post1",
     "asgi-lifespan>=2.1.0",
     "httpx>=0.28.1",
-    "pytest>=8.3.5",
+    "pytest>=8.4.1",
     "pytest-archon>=0.0.6",
-    "pytest-cov>=6.1.1",
-    "pytest-xdist>=3.7.0",
+    "pytest-cov>=6.2.1",
+    "pytest-xdist>=3.8.0",
     "sqlalchemy-pytest>=0.3.2.post1",
-    "typeguard>=4.4.2",
+    "typeguard>=4.4.4",
 ]
 
 [tool.uv]

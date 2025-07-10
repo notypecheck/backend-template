@@ -5,11 +5,11 @@ import pytest
 from asgi_lifespan import LifespanManager
 from fastapi import FastAPI
 
+from app.adapters.api.app import create_app
+
 
 @pytest.fixture(scope="session")
 async def http_app() -> AsyncIterator[FastAPI]:
-    from app.adapters.api.app import create_app
-
     app = create_app()
     async with LifespanManager(app=app):
         yield app
