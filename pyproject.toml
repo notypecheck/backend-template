@@ -4,40 +4,40 @@ version = "0.0.1"
 description = ""
 license = { text = "MIT" }
 authors = [
-    { name = "Doctor", email = "thirvondukr@gmail.com" },
+    { name = "notypecheck", email = "notypecheck@gmail.com" },
 ]
 requires-python = ">=3.13"
 dependencies = [
-    "aioinject>=1.4.3",
-    "alembic>=1.16.3",
+    "aioinject>=1.10.0",
+    "alembic>=1.16.5",
     "asyncpg>=0.30.0",
-    "fastapi>=0.116.0",
-    "orjson>=3.10.18",
-    "pydantic>=2.11.7",
-    "pydantic-settings>=2.10.1",
+    "fastapi>=0.118.0",
+    "orjson>=3.11.3",
+    "pydantic>=2.11.10",
+    "pydantic-settings>=2.11.0",
     "python-dotenv>=1.1.1",
     "result>=0.17.0",
     "sentry-sdk>=2.32.0",
-    "sqlalchemy[asyncio]>=2.0.41",
-    "strawberry-graphql>=0.275.5",
-    "uvicorn>=0.35.0",
+    "sqlalchemy[asyncio]>=2.0.43",
+    "strawberry-graphql>=0.282.0",
+    "uvicorn>=0.37.0",
     "uvloop>=0.21.0 ; sys_platform != 'win32'",
 ]
 
 
 [dependency-groups]
 lint = [
-    "deptry>=0.23.0",
-    "mypy>=1.16.1",
-    "ruff>=0.12.2",
+    "deptry>=0.23.1",
+    "mypy>=1.18.2",
+    "ruff>=0.13.3",
 ]
 test = [
     "anyio>=4.6.2.post1",
     "asgi-lifespan>=2.1.0",
     "httpx>=0.28.1",
-    "pytest>=8.4.1",
-    "pytest-archon>=0.0.6",
-    "pytest-cov>=6.2.1",
+    "pytest>=8.4.2",
+    "pytest-archon>=0.0.7",
+    "pytest-cov>=7.0.0",
     "pytest-xdist>=3.8.0",
     "sqlalchemy-pytest>=0.3.2.post1",
     "typeguard>=4.4.4",
